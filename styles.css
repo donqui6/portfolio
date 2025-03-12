@@ -1,0 +1,189 @@
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+header,
+footer {
+  background-color: #282c34;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+footer {
+  font-size: 0.9rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+}
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #61dafb;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+section {
+  padding: 2rem 0;
+  border-bottom: 1px solid #ddd;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+.section-title {
+  font-size: 2rem;
+  text-align: center;
+  color: #282c34;
+  margin-bottom: 1rem;
+}
+
+p,
+ul {
+  text-align: justify;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.7rem 1.5rem;
+  background-color: #61dafb;
+  color: #282c34;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #4bb2e2;
+}
+
+header {
+  position: relative;
+  background: linear-gradient(20deg, darkblue, darkmagenta);
+  background-size: 400% 400%;
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  animation: gradientBackground 10s ease infinite;
+  overflow: hidden;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Horloge stylisée */
+.clock {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  border: 4px solid white;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.clock .hour-hand,
+.clock .minute-hand,
+.clock .second-hand {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: white;
+  transform-origin: 100%;
+  top: 50%;
+  left: 0%;
+  transform: rotate(90deg); /* Par défaut */
+  transition: transform 0.05s cubic-bezier(0.4, 2.3, 0.3, 1);
+}
+
+.clock .hour-hand {
+  height: 4px;
+  background: #f0f0f0;
+}
+
+.clock .minute-hand {
+  height: 3px;
+  background: #dcdcdc;
+}
+
+.clock .second-hand {
+  height: 2px;
+  background: #ff7675;
+}
+
+.clock .center-dot {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
